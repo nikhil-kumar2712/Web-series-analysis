@@ -1,7 +1,7 @@
 # 🎬 Web Series Rating Analysis for OTT Platforms  
 
 A system that analyzes and predicts web series ratings based on viewer preferences, genres, directors, and cast members.  
-This project combines **machine learning models, data visualization, and interactive interfaces** to provide insights into OTT platform ratings.  
+This project combines ** data visualization, and interactive interfaces** to provide insights into OTT platform ratings.  
 Published as a **Research Paper in IEEE**.  
 
 ---
