@@ -7,12 +7,10 @@ Published as a **Research Paper in IEEE**.
 ---
 
 ## ✨ Features  
-- 📊 Predicts web series ratings with **85% accuracy**  
 - 🎭 Considers multiple factors such as genre, director, actors, and user preferences  
 - 📈 Interactive **Tableau dashboards** for visualization of insights and trends  
-- 💻 Python-based GUI for user-friendly predictions and analysis  
-- 🧠 Supports personalized recommendation generation  
-
+- 💻 Python-based GUI for user-friendly predictions and analysis
+  
 ---
 
 ## 🛠️ Tech Stack  
@@ -31,7 +29,6 @@ Published as a **Research Paper in IEEE**.
 ---
 
 ## 📊 Results & Insights  
-- ✅ Achieved **85% prediction accuracy** on testing datasets  
 - ✅ Identified major influencing factors like **genres, directors, and lead characters**  
 - ✅ Published findings as an **IEEE Research Paper** to highlight the importance of data-driven OTT recommendations  
 
