@@ -11,7 +11,6 @@ import time
 # -------------------------
 INPUT_CSV = "webseries_cleaned.csv"
 OUTPUT_CSV = "webseries_with_genre.csv"
-MISSING_FILE = "missing_genres.txt"
 SLEEP_BETWEEN_QUERIES = 1.5  # delay to avoid rate-limiting
 SAVE_EVERY = 500  # save progress after every 500 updates
 
@@ -76,8 +75,6 @@ missing_df = df[mask_missing].copy()
 
 print(f"Found {missing_df.shape[0]} missing genres...")
 
-open(MISSING_FILE, "w").close()  # clear file
-
 for count, (idx, row) in enumerate(tqdm(missing_df.iterrows(), total=missing_df.shape[0], desc="Fetching missing genres"), start=1):
     title = row["series_name"]
     genre = fetch_genre(title)
@@ -85,8 +82,6 @@ for count, (idx, row) in enumerate(tqdm(missing_df.iterrows(), total=missing_df.
         df.at[idx, "genre"] = genre
     else:
         df.at[idx, "genre"] = "Unknown"
-        with open(MISSING_FILE, "a", encoding="utf-8") as f:
-            f.write(f"{idx}\t{title}\n")
 
     # save progress every 500 updates
     if count % SAVE_EVERY == 0:
@@ -98,6 +93,6 @@ for count, (idx, row) in enumerate(tqdm(missing_df.iterrows(), total=missing_df.
 # Final save
 df.to_csv(OUTPUT_CSV, index=False)
 print(f"✅ Done! Final file saved to {OUTPUT_CSV}")
-print(f"❌ Unknown genres logged in {MISSING_FILE}")
+
 
 
